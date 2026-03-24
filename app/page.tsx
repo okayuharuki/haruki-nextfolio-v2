@@ -6,12 +6,12 @@ import ContactSection from "@/app/_components/ContactSection";
 
 export default function Home() {
   return (
-    <div className="bg-black">
+    <main className="bg-black">
       <HeroSection />
       <Marquee />
       <WorkSection />
       <AboutSection />
       <ContactSection />
-    </div>
+    </main>
   );
 }

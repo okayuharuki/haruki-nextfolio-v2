@@ -39,8 +39,8 @@ export default function ContactSection() {
         <a href="mailto:okayuharuki@gmail.com" className={`${cardClass} min-h-60`}>
           <div>
             <p className="text-gray-400 text-sm font-medium tracking-widest mb-2">EMAIL</p>
-            {/* 親（group）がホバーされたら、文字色をオレンジ（group-hover:text-orange-400）にする！ */}
-            <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-orange-400 transition-colors">
+            {/* 親（group）がホバーされたら、文字色をゴールデンアンバーにする！ */}
+            <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-[#FF851B] transition-colors">
               okayuharuki@gmail.com
             </h3>
           </div>

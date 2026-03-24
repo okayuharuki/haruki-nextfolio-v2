@@ -16,8 +16,8 @@ export default function HeroSection() {
   // 魔法の計算式１：スクロール量（0〜1）を、文字の大きさ（1倍〜40倍）に変換
   const scale = useTransform(scrollYProgress, [0, 1], [1, 40]);
 
-  // 魔法の計算式２：最後の方（0.8〜1）で、文字をだんだん透明（1〜0）にして消す！
-  const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
+  // 魔法の計算式２：ズームが進む早い段階（0.15〜0.4）で、文字をだんだん透明にして消す！
+  const opacity = useTransform(scrollYProgress, [0.15, 0.4], [1, 0]);
 
   return (
     <section ref={targetRef} className="h-[300vh] relative">
@@ -25,7 +25,7 @@ export default function HeroSection() {
         <motion.div style={{ scale, opacity }} className="text-center">
           <h1 className="text-7xl md:text-9xl font-bold text-white tracking-tighter">HARUKI.</h1>
 
-          <p className="text-orange-500 font-bold tracking-widest mt-4">FRONTEND DEVELOPER</p>
+          <p className="text-[#FF851B] font-bold tracking-widest mt-4">FRONTEND DEVELOPER</p>
         </motion.div>
       </div>
     </section>

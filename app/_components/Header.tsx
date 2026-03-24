@@ -8,7 +8,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
       {/* 中身を横並びにする箱 */}
       <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold tracking-widest text-white hover:text-orange-500 transition-colors">
+        <Link href="/" className="text-xl font-bold tracking-widest text-white hover:text-[#FF851B] transition-colors">
           HARUKI.
         </Link>
         <nav className="flex gap-8 text-sm font-medium text-gray-300">
