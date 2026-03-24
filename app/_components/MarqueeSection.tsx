@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Marquee() {
+export default function MarqueeSection() {
   // 流したい文字のリスト
   const words = ["REACT", "NEXT.JS", "TAILWIND CSS", "FRAMER MOTION", "FRONTEND DEVELOPER"];
 
@@ -19,22 +19,16 @@ export default function Marquee() {
             duration: 10,
           }}
         >
-          <div className="flex whitespace-nowrap font-bold text-black text-5xl md:text-7xl uppercase">
-            {words.map((word, index) => (
-              <span key={index} className="flex items-center gap-12 pr-12">
-                {word}
-                <span>✦</span>
-              </span>
-            ))}
-          </div>
-          <div className="flex whitespace-nowrap font-bold text-black text-5xl md:text-7xl uppercase">
-            {words.map((word, index) => (
-              <span key={`second-${index}`} className="flex items-center gap-12 pr-12">
-                {word}
-                <span>✦</span>
-              </span>
-            ))}
-          </div>
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex whitespace-nowrap font-bold text-black text-5xl md:text-7xl uppercase">
+              {words.map((word, index) => (
+                <span key={index} className="flex items-center gap-12 pr-12">
+                  {word}
+                  <span>✦</span>
+                </span>
+              ))}
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

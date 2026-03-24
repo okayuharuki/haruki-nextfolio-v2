@@ -3,23 +3,42 @@ type Project = {
   title: string;
   description: string;
   icon: string;
+  tags: string[];
+  link: string;
+  accentColor: string;
+  gradientFrom: string;
 };
 
 export const PROJECTS_DATA: Project[] = [
   {
     title: "Portfolio Site",
-    description: "Next.jsとTailwind CSSで構築した、自身のポートフォリオサイト。",
+    description:
+      "Next.jsとTailwind CSSで構築した、自身のポートフォリオサイト。最新のモダンWebデザインと、Framer Motionによる滑らかなアニメーションを体現しました。",
     icon: "🚀",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    link: "#",
+    accentColor: "text-orange-500", // オレンジ色の文字
+    gradientFrom: "from-orange-500/20", // オレンジ色の光
   },
   {
     title: "今日のランチ決定くん",
-    description: "迷いを過去のものに。今日のランチを劇的に決定します。",
+    description:
+      "迷いを過去のものに。シンプルで直感的なUIと独自のアルゴリズムで、今日のランチを劇的に決定する究極のサポートツールです。",
     icon: "🍚",
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    link: "#",
+    accentColor: "text-blue-400", // 2枚目はブルーに！
+    gradientFrom: "from-blue-500/20",
   },
   {
     title: "リアルタイム天気予報",
-    description: "リアルタイムの天気予報を提供。都市の名前を入力して、現在の天気情報を取得できます。",
+    description:
+      "都市の名前を入力するだけで、外部APIからリアルタイムの気象情報を提供。非同期処理を活用した実用的なツールです。",
     icon: "🌤️",
+    tags: ["API", "JavaScript", "Tailwind CSS"],
+    link: "#",
+    accentColor: "text-green-400", // 3枚目はグリーンに！
+    gradientFrom: "from-green-500/20",
   },
 ];
 
