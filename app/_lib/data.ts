@@ -1,3 +1,4 @@
+// プロジェクト一覧
 type Project = {
   title: string;
   description: string;
@@ -17,8 +18,34 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     title: "リアルタイム天気予報",
-    description:
-      "リアルタイムの天気予報を提供。都市の名前を入力して、現在の天気情報を取得できます。",
+    description: "リアルタイムの天気予報を提供。都市の名前を入力して、現在の天気情報を取得できます。",
     icon: "🌤️",
   },
+];
+
+// スキル一覧
+export const SKILL_DATA = [
+  // --- Frontend (Modern) ---
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
+  "Framer Motion",
+
+  // --- CMS & Backend ---
+  "WordPress (SWELL / カスタマイズ)",
+  "PHP (テンプレート・ロジック改修)",
+
+  // --- Fundamentals ---
+  "HTML5 / CSS3",
+  "JavaScript",
+  "jQuery",
+
+  // --- Design & Tools ---
+  "Figma",
+  "GitHub (Issue管理)",
+  "Vercel",
+
+  // --- Business & Marketing ---
+  "GA4 (設定)",
 ];

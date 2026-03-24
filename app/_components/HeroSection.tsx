@@ -20,7 +20,7 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   return (
-    <section ref={targetRef} className="h-[250vh] relative">
+    <section ref={targetRef} className="h-[300vh] relative">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
         <motion.div style={{ scale, opacity }} className="text-center">
           <h1 className="text-7xl md:text-9xl font-bold text-white tracking-tighter">HARUKI.</h1>

@@ -1,6 +1,7 @@
 import WorkSection from "@/app/_components/WorkSection";
 import HeroSection from "@/app/_components/HeroSection";
 import Marquee from "@/app/_components/Marquee";
+import AboutSection from "@/app/_components/AboutSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <Marquee />
       <WorkSection />
+      <AboutSection />
     </div>
   );
 }
