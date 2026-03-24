@@ -9,7 +9,7 @@ export default function Marquee() {
   return (
     <section className="py-24 bg-black overflow-hidden flex flex-col justify-center relative z-20">
       {/* はみ出た部分を隠す(overflow-hidden) ＆ 斜め3度に傾ける(-rotate-3) */}
-      <div className="w-full overflow-hidden bg-[#FF851B] py-4 -rotate-3 my-32">
+      <div className="w-full overflow-hidden bg-[#FF851B] shadow-[0_0_100px_rgba(249,115,22,0.4)] py-4 -rotate-3 my-32">
         <motion.div
           className="flex w-max"
           animate={{ x: ["0%", "-50%"] }}
