@@ -6,7 +6,7 @@ import { SKILL_DATA } from "@/app/_lib/data";
 export default function AboutSection() {
   return (
     <section id="about" className="bg-black text-white w-full">
-      <div className="min-h-screen flex item-center justify-center px-6 relative z-10">
+      <div className="min-h-screen flex items-center justify-center px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ export default function AboutSection() {
           <p className="text-4xl md:text-7xl font-bold leading-tight text-gray-100 tracking-tight">
             洗練されたモダンな設計。
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 via-pink-500 to-purple-500">
               そして、ランチへの飽くなき執念。
             </span>
             <br />
