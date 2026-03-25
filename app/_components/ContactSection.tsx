@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function ContactSection() {
   // 共通のカードスタイル（ホバーすると少し浮き上がって、枠線が光る魔法！）
   const cardBase =
-    "bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group hover:border-zinc-500 transition-all duration-500 cursor-pointer";
+    "bg-zinc-900 border border-zinc-800 rounded-3xl p-5 md:p-10 group hover:border-zinc-500 transition-all duration-500 cursor-pointer";
 
   return (
     <section id="contact" className="py-32 w-full max-w-7xl mx-auto px-8 relative z-10">
@@ -40,7 +40,7 @@ export default function ContactSection() {
           <div>
             <p className="text-gray-400 text-sm font-medium tracking-widest mb-2">EMAIL</p>
             {/* 親（group）がホバーされたら、文字色をゴールデンアンバーにする！ */}
-            <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-[#FF851B] transition-colors">
+            <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[#FF851B] transition-colors">
               okayuharuki@gmail.com
             </h3>
           </div>

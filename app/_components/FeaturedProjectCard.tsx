@@ -19,7 +19,7 @@ export default function FeaturedProjectCard({ project, index }: FeaturedProjectC
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
       // max-w-2xl という制限を外し、横長の巨大な弁当箱（flex-col md:flex-row）
-      className="sticky group bg-zinc-900 border border-zinc-800 p-8 md:p-16 rounded-[2.5rem] w-full flex flex-col md:flex-row items-center gap-12 shadow-2xl"
+      className="md:relative md:sticky top-20 md:top-28 group bg-zinc-900 border border-zinc-800 p-8 md:p-16 rounded-[2.5rem] w-full flex flex-col md:flex-row items-center gap-12 shadow-2xl"
       style={{ top: stickyTopPosition }}
     >
       {/* ==========================================

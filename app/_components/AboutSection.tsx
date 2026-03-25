@@ -17,7 +17,7 @@ export default function AboutSection() {
             className="md:col-span-2 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl"
           >
             <h3 className="text-2xl font-bold mb-6">Profile</h3>
-            <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
+            <div className="space-y-4 text-gray-300 leading-relaxed text-md md:text-lg">
               <p>こんにちは、HARUKIです。</p>
               <p>
                 「使いやすい」だけでなく、「使っていてちょっと楽しくなる」ような体験をつくることを大切にしています。

@@ -35,7 +35,7 @@ export default function StatementSection() {
             variants={itemVariants}
             className="text-4xl mb-10 md:text-7xl font-bold leading-tight text-gray-100 tracking-tight"
           >
-            ランチへの飽くなき執念。
+            ランチへの<br className="md:hidden"/>飽くなき執念。
           </motion.p>
           <motion.p
             variants={itemVariants}
@@ -44,16 +44,16 @@ export default function StatementSection() {
             日常の悩みを、
             <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 via-pink-500 to-purple-500">
-              ちょっと楽しい体験に変える。
+              ちょっと楽しい体験に<br className="md:hidden"/>変える。
             </span>
           </motion.p>
           <motion.p
             variants={itemVariants}
             className="text-4xl md:text-7xl font-bold leading-tight text-gray-100 tracking-tight"
           >
-            モダンな技術と遊び心で、
+            モダンな技術と<br className="md:hidden"/>遊び心で、
             <br />
-            チームの可能性を最大化する。
+            チームの可能性を<br className="md:hidden"/>最大化する。
           </motion.p>
         </motion.div>
       </div>
