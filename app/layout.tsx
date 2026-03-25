@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "HARUKI | Frontend Developer",
-  description: "フロントエンド開発に情熱を注ぐエンジニア、HARUKIのポートフォリオサイト。",
+  description: "「ちょっと楽しい」をつくる HARUKI のポートフォリオ",
 };
 
 export default function RootLayout({
