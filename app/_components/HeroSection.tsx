@@ -26,7 +26,7 @@ export default function HeroSection() {
           className="absolute top-1/4 text-center z-10 w-full px-4 pt-15"
         >
           <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-gray-400 mb-4">
-            すべては、最高の体験のために。
+            すべては、最高の経験のために。
           </h2>
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter bg-clip-text text-transparent bg-linear-to-br from-white to-gray-500">
             HARUKI.

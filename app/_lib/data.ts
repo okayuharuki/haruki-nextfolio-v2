@@ -1,5 +1,9 @@
-// プロジェクト一覧
-type Project = {
+{
+  /* ==========================================
+          プロジェクト一覧
+    ========================================== */
+}
+export type Project = {
   title: string;
   description: string;
   icon: string;
@@ -42,7 +46,46 @@ export const PROJECTS_DATA: Project[] = [
   },
 ];
 
-// スキル一覧
+{
+  /* ==========================================
+          その他のプロジェクト一覧
+    ========================================== */
+}
+// 上にあるプロジェクトの型からaccentColorとgradientFromを抜いたものを定義
+export type ArchiveProject = Omit<Project, "accentColor" | "gradientFrom">;
+
+export const ARCHIVE_PROJECTS_DATA: ArchiveProject[] = [
+  {
+    title: "コーポレートサイト模写",
+    description:
+      "HTML/CSSの基礎を固めるために作成。レスポンシブデザイン（スマホ対応）のピクセルパーフェクトな実装にこだわりました。",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    icon: "🏢",
+    link: "#",
+  },
+  {
+    title: "オリジナルブログ",
+    description:
+      "既存テーマを使わず、自作テーマで構築したWordPressサイト。PHPによるループ処理やカスタム投稿タイプを実装しています。",
+    tags: ["WordPress", "PHP", "Sass"],
+    icon: "✍️",
+    link: "#",
+  },
+  {
+    title: "シンプルなTodoアプリ",
+    description:
+      "Reactの基礎（useState, useEffect）を学ぶための第一歩。データの追加・削除・完了状態の切り替えを実装しました。",
+    tags: ["React", "Tailwind CSS"],
+    icon: "✅",
+    link: "#",
+  },
+];
+
+{
+  /* ==========================================
+          スキル一覧
+    ========================================== */
+}
 export const SKILL_DATA = [
   // --- Frontend (Modern) ---
   "React",
