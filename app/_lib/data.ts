@@ -11,6 +11,7 @@ export type Project = {
   link: string;
   accentColor: string;
   gradientFrom: string;
+  openInNewTab?: boolean; // falseにすると_blank無効（デフォルトはtrue）
 };
 
 export const PROJECTS_DATA: Project[] = [
@@ -23,6 +24,7 @@ export const PROJECTS_DATA: Project[] = [
     link: "#",
     accentColor: "text-orange-500", // オレンジ色の文字
     gradientFrom: "from-orange-500/20", // オレンジ色の光
+    openInNewTab: false, // 今いるサイト自身なので別タブで開かない
   },
   {
     title: "今日のランチ決定くん",

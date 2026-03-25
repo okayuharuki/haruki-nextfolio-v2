@@ -27,6 +27,7 @@ export default function ScrollToTop() {
       {isVisible && (
         // 画面の右下（bottom-8 right-8）に固定（fixed）して、一番手前（z-50）に出す！
         <motion.button
+          aria-label="トップへ戻る" // アクセシビリティのためのラベル
           onClick={scrollToTop}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}

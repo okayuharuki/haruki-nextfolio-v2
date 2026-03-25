@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import type { ArchiveProject } from "@/app/_lib/data";
 
 // 【何を受け取る？】ArchiveProject（過去作品のデータ）と、順番（index）
@@ -23,7 +24,7 @@ export default function OtherProjectCard({ project, index }: OtherProjectsCardPr
     >
       {/* 🏢 カードの上半分（アイコン・タイトル・説明） */}
       <div>
-        <div className="text-4xl mb-6 group-hover:scale-110 transition-transform origin-left w-fit">{project.icon}</div>
+        <div aria-hidden="true" className="text-4xl mb-6 group-hover:scale-110 transition-transform origin-left w-fit">{project.icon}</div>
         <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{project.title}</h3>
         <p className="text-gray-400 text-sm leading-relaxed mb-6">{project.description}</p>
       </div>
@@ -40,12 +41,14 @@ export default function OtherProjectCard({ project, index }: OtherProjectsCardPr
           ))}
         </div>
         {/* リンク（マウスが乗るとテーマカラーのオレンジ色に光る！） */}
-        <a
+        <Link
           href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sm font-bold text-white flex items-center gap-2 group-hover:text-[#FF851B] transition-colors mt-2"
         >
           詳細を見る <span className="group-hover:translate-x-1 transition-transform">→</span>
-        </a>
+        </Link>
       </div>
     </motion.div>
   );

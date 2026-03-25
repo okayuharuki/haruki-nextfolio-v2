@@ -44,6 +44,7 @@ export default function FeaturedProjectCard({ project, index }: FeaturedProjectC
         {/* data.ts で追加した「色（accentColor）」を使ってボタンを光らせる！ */}
         <a
           href={project.link}
+          {...(project.openInNewTab !== false && { target: "_blank", rel: "noopener noreferrer" })}
           className={`${project.accentColor} text-lg font-bold hover:opacity-80 transition-opacity flex items-center gap-2`}
         >
           アプリを見る <span>→</span>
@@ -60,7 +61,7 @@ export default function FeaturedProjectCard({ project, index }: FeaturedProjectC
         />
 
         {/* 巨大なアイコンが、ホバーで少しだけ前に迫ってくる！ */}
-        <span className="text-8xl md:text-9xl relative z-10 group-hover:scale-110 transition-transform duration-500 cursor-pointer">
+        <span aria-hidden="true" className="text-8xl md:text-9xl relative z-10 group-hover:scale-110 transition-transform duration-500 cursor-pointer">
           {project.icon}
         </span>
       </div>
