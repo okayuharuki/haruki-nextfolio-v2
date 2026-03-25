@@ -1,4 +1,4 @@
-import WorkSection from "@/app/_components/WorkSection";
+import FeaturedProjectsSection from "@/app/_components/FeaturedProjectsSection";
 import HeroSection from "@/app/_components/HeroSection";
 import MarqueeSection from "@/app/_components/MarqueeSection";
 import AboutSection from "@/app/_components/AboutSection";
@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <MarqueeSection />
       <StatementSection />
-      <WorkSection />
+      <FeaturedProjectsSection />
       <AboutSection />
       <ContactSection />
     </main>
