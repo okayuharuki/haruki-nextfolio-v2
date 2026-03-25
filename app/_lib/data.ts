@@ -56,25 +56,41 @@ export type ArchiveProject = Omit<Project, "accentColor" | "gradientFrom">;
 
 export const ARCHIVE_PROJECTS_DATA: ArchiveProject[] = [
   {
-    title: "コーポレートサイト模写",
+    title: "SaaS企業のコーポレートサイト",
     description:
-      "HTML/CSSの基礎を固めるために作成。レスポンシブデザイン（スマホ対応）のピクセルパーフェクトな実装にこだわりました。",
-    tags: ["HTML5", "CSS3", "JavaScript"],
+      "Next.jsとmicroCMSの連携を学ぶ教材を通して作成。microCMSおよびWordPressと連携（ヘッドレスCMS化）し、容易に記事投稿ができる更新性の高いシステムを実現しました。",
+    tags: ["Next.js", "microCMS", "WordPress", "Tailwind CSS"],
     icon: "🏢",
-    link: "#",
+    link: "https://flow-meister-jet-seven.vercel.app/",
   },
   {
-    title: "オリジナルブログ",
+    title: "WordPressテーマ開発",
     description:
-      "既存テーマを使わず、自作テーマで構築したWordPressサイト。PHPによるループ処理やカスタム投稿タイプを実装しています。",
+      "実務レベルのWordPress構築を学ぶための課題として、ゼロから自作テーマを作成。指定された要件を満たしつつ、PHPによるループ処理やカスタム投稿タイプを実装しました。",
     tags: ["WordPress", "PHP", "Sass"],
     icon: "✍️",
-    link: "#",
+    link: "https://okayuharuki.com/create-site/okayu0326-clinic/",
+  },
+  {
+    title: "キャンペーンサイト模写",
+    description:
+      "Figmaからのコーディング手法を学ぶ教材の課題作品。レスポンシブデザイン（スマホ対応）はもちろん、ピクセルパーフェクトな実装にこだわりました。",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    icon: "🎉",
+    link: "https://okayuharuki.com/create-site/onomichi/",
+  },
+  {
+    title: "WebアプリLP模写",
+    description:
+      "Figmaからのコーディング実践。モダンなWebアプリのランディングページを想定し、自然なホバーアニメーションや複雑なレイアウトの再現に注力しました。",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    icon: "💻", // 🏢から少し変えてみました！
+    link: "https://okayuharuki.com/create-site/OHA/",
   },
   {
     title: "シンプルなTodoアプリ",
     description:
-      "Reactの基礎（useState, useEffect）を学ぶための第一歩。データの追加・削除・完了状態の切り替えを実装しました。",
+      "Reactの基礎（useState, useEffect）を定着させるための第一歩。データの追加・削除・完了状態の切り替えといったCRUD操作の基本を実装しました。",
     tags: ["React", "Tailwind CSS"],
     icon: "✅",
     link: "#",

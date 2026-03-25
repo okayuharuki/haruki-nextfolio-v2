@@ -9,12 +9,17 @@ export default function AboutSection() {
           <div className="md:col-span-2 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
             <h3 className="text-2xl font-bold mb-6">Profile</h3>
             <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
-              <p>こんにちは！フロントエンド開発に情熱を注ぐエンジニア、HARUKIです。</p>
+              <p>こんにちは、HARUKIです。</p>
               <p>
-                「使いやすくて、ちょっと心が躍る」ようなUIを作るのが大好きです。 特にReactやNext.js、Tailwind
-                CSSを使ったモダンなWeb開発を得意としており、 アニメーションを取り入れたリッチな表現を追求しています。
+                「使いやすい」だけでなく、「使っていてちょっと楽しくなる」ような体験をつくることを大切にしています。
               </p>
-              <p>趣味はフットサルと美味しいお店を探すことです🍔</p>
+              <p>
+                現在はフロントエンドエンジニアとして、ReactやNext.jsを使った開発に取り組みながら、ユーザーが迷わず直感的に使える設計や、思わず使いたくなるようなUIを意識して開発しています。
+              </p>
+              <p>グルメや旅行が好きで、「人の時間を少し豊かにするサービス」を作ることが自分のモチベーションです。</p>
+              <p>
+                これからは、技術だけでなく体験や価値提供まで考えられるエンジニアとして成長していきたいと考えています。
+              </p>
             </div>
           </div>
 
