@@ -30,7 +30,7 @@ export const PROJECTS_DATA: Project[] = [
       "迷いを過去のものに。シンプルで直感的なUIと独自のアルゴリズムで、今日のランチを劇的に決定する究極のサポートツールです。",
     icon: "🍚",
     tags: ["React", "JavaScript", "Tailwind CSS"],
-    link: "#",
+    link: "https://lunch-decider-app-nine.vercel.app/",
     accentColor: "text-blue-400", // 2枚目はブルーに！
     gradientFrom: "from-blue-500/20",
   },
@@ -40,7 +40,7 @@ export const PROJECTS_DATA: Project[] = [
       "都市の名前を入力するだけで、外部APIからリアルタイムの気象情報を提供。非同期処理を活用した実用的なツールです。",
     icon: "🌤️",
     tags: ["API", "JavaScript", "Tailwind CSS"],
-    link: "#",
+    link: "https://weather-app2026.vercel.app/",
     accentColor: "text-green-400", // 3枚目はグリーンに！
     gradientFrom: "from-green-500/20",
   },
@@ -93,7 +93,7 @@ export const ARCHIVE_PROJECTS_DATA: ArchiveProject[] = [
       "Reactの基礎（useState, useEffect）を定着させるための第一歩。データの追加・削除・完了状態の切り替えといったCRUD操作の基本を実装しました。",
     tags: ["React", "Tailwind CSS"],
     icon: "✅",
-    link: "#",
+    link: "https://haruki-todo-react-v2.vercel.app/",
   },
 ];
 
