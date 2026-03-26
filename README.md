@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Haruki's Portfolio Site
 
-## Getting Started
+「Next.jsとTailwind CSSで構築した、自身のポートフォリオサイト。」
+最新のモダンWebデザインと、Framer Motionによる滑らかなアニメーションを体現した、こだわりの名刺代わりのWebサイトです。
 
-First, run the development server:
+## 🌐 アプリのURL
+https://haruki-nextfolio-v2.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ 使用技術
+- **フレームワーク:** Next.js (React)
+- **スタイリング:** Tailwind CSS
+- **アニメーション:** Framer Motion
+- **デプロイ:** Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ 主な機能と特徴
+- **モダンなダークUI:** すりガラス効果（`backdrop-blur`）を用いた、洗練されたヘッダーとドロワーメニュー。
+- **完全なレスポンシブ対応:** PCとスマホで最適化されたレイアウト（スマホ時の全画面ハンバーガーメニュー等）。
+- **シームレスなUX:** Framer Motionを活用した、画面遷移やスクロール時の滑らかなフェードイン・スライドダウン実装。
+- **Scroll to Top機能:** ユーザビリティを考慮し、ページ下部からスムーズにトップへ戻れるボタンを実装。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💡 開発の背景・目的
+自身のスキルセットや制作物を魅力的に伝えるための「ショーウィンドウ」として開発しました。
+単なる静的なサイトではなく、Next.jsの学習を兼ねて、実務レベルのコンポーネント設計やState管理、モダンなCSSフレームワークのベストプラクティスを吸収することを目的としています。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧗‍♂️ 課題と解決策（こだわったポイント）
 
-## Learn More
+### 1. HeaderとMobileDrawerの適切なコンポーネント分割
+コードの肥大化を防ぐため、ヘッダー本体とスマホ用のドロワーメニューを別コンポーネントに分割しました。
+その際、親（Header）で持っている開閉状態（`isOpen`）と状態更新関数（`onClose`）を、Propsとして子（MobileDrawer）に渡す設計にすることで、Reactにおける「単一方向のデータフロー」を意識した保守性の高い構造にしています。
 
-To learn more about Next.js, take a look at the following resources:
+### 2. イベントハンドラの即時実行（無限ループ）の回避
+Propsで関数を渡す際、直感的に `onClose={setIsOpen(false)}` と書いてしまうとレンダリング時に即時実行されてしまうReact特有の罠に直面しました。これを `onClose={() => setIsOpen(false)}` のようにアロー関数でラップすることで、クリック時のみ実行されるよう正確に制御しています。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. CSSの `absolute` と `fixed` の挙動の違いによるバグ修正
+スマホ用ドロワーメニューを実装した際、最初は `absolute` で配置していたため、スクロールすると背景の本文が見えてしまう問題が発生しました。これを `fixed` と `z-index` を組み合わせたスタイル（`fixed z-40 bg-black/95`）に修正することで、どの位置にいてもカメラのレンズにピタッと張り付く完璧な全画面メニューを実現しました。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. ユーザー体験（UX）を底上げするマイクロインタラクション
+SVGを用いたアイコンで `currentColor` を活用し、ホバー時に一瞬でテーマカラー（オレンジ）へ変化する仕組みや、Tailwind CSSを用いた不要なデフォルトスタイルのリセットなど、「触っていて心地よい」プロ仕様のUI構築にこだわりました。

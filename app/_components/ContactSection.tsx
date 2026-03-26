@@ -18,10 +18,9 @@ export default function ContactSection() {
         className="mb-16 text-left"
       >
         <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-6">
-          次は、あなたと。
-          <br />
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-400 to-white">
-            最高のプロジェクトを。
+          <span className="block mb-4">次は、<br className="md:hidden"/>あなたと。</span>
+          <span className="block text-transparent bg-clip-text bg-linear-to-r from-gray-400 to-white">
+            最高の<br className="md:hidden"/>プロジェクトを。
           </span>
         </h2>
       </motion.div>
@@ -36,7 +35,10 @@ export default function ContactSection() {
       >
         {/* ① 左側：巨大なEmailカード */}
         {/* hrefに mailto: を入れるとメールソフトが立ち上がります */}
-        <a href="mailto:okayuharuki@gmail.com" className={`${cardBase} flex flex-col md:col-span-2 justify-between min-h-30`}>
+        <a
+          href="mailto:okayuharuki@gmail.com"
+          className={`${cardBase} flex flex-col md:col-span-2 justify-between min-h-30`}
+        >
           <div>
             <p className="text-gray-400 text-sm font-medium tracking-widest mb-2">EMAIL</p>
             {/* 親（group）がホバーされたら、文字色をゴールデンアンバーにする！ */}
