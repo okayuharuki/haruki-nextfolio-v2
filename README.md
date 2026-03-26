@@ -3,7 +3,7 @@
 「Next.jsとTailwind CSSで構築した、自身のポートフォリオサイト。」
 最新のモダンWebデザインと、Framer Motionによる滑らかなアニメーションを体現した、こだわりの名刺代わりのWebサイトです。
 
-## 🌐 アプリのURL
+## 🌐 URL
 https://haruki-nextfolio-v2.vercel.app/
 
 ## 🛠️ 使用技術

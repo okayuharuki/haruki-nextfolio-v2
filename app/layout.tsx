@@ -5,6 +5,8 @@ import Footer from "@/app/_components/Footer";
 import ScrollToTop from "@/app/_components/ScrollToTop";
 import "./globals.css";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,8 +18,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HARUKI | Frontend Developer",
+  metadataBase: new URL(SITE_URL),
+
+  title: "HARUKI. | Frontend Developer",
   description: "「ちょっと楽しい」をつくる HARUKI のポートフォリオ",
+  openGraph: {
+    title: "HARUKI. | Frontend Developer",
+    description: "「ちょっと楽しい」をつくる HARUKI のポートフォリオ",
+    images: ["/ogp.jpg"],
+    siteName: "HARUKI. Portfolio",
+    url: "/",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
