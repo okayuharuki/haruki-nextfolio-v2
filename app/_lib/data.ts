@@ -18,7 +18,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     title: "Portfolio Site",
     description:
-      "Next.jsとTailwind CSSで構築した、自身のポートフォリオサイト。最新のモダンWebデザインと、Framer Motionによる滑らかなアニメーションを体現しました。",
+      "Next.jsとTailwind CSSで構築した、自身のポートフォリオサイト。最新のモダンWebデザインとFramer Motionによる直感的なUIに加え、Google Lighthouseでの全項目100点を達成。速度・SEO・アクセシビリティを極限まで最適化しました。",
     icon: "🚀",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
     link: "#",
