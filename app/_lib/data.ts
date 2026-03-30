@@ -20,7 +20,7 @@ export const PROJECTS_DATA: Project[] = [
     description:
       "Next.jsとTypeScriptで構築。最新のモダンWebデザインとFramer Motionによる直感的なUIに加え、Lighthouseでの全項目100点を達成。速度・SEO・アクセシビリティを極限まで最適化しました。",
     icon: "🚀",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     link: "#",
     accentColor: "text-orange-500", // オレンジ色の文字
     gradientFrom: "from-orange-500/20", // オレンジ色の光
