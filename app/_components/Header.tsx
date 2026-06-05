@@ -28,12 +28,16 @@ export default function Header() {
             HARUKI.
           </Link>
           {/* スマホで隠す（hidden）＆ PCで横並び（md:flex） */}
-          <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-            {navItems.map((item) => (
-              <Link key={item.name} href={item.href} className="hover:text-white transition-colors">
-                {item.name}
-              </Link>
-            ))}
+          <nav className="hidden md:block">
+            <ul className="flex gap-8 text-sm font-medium text-gray-300">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="hover:text-white transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
           {/* スマホ版ハンバーガーボタン（md:hidden でスマホの時だけ表示！） */}
           <button

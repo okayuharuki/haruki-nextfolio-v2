@@ -8,7 +8,7 @@ import StatementSection from "@/app/_components/StatementSection";
 
 export default function Home() {
   return (
-    <main className="bg-black">
+    <main className="relative bg-black">
       <HeroSection />
       <MarqueeSection />
       <StatementSection />

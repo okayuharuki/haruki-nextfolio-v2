@@ -1,25 +1,22 @@
 "use client";
 
-import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function HeroSection() {
-  // センサーを作る（HTMLの箱にくっつける準備）
-  const targetRef = useRef<HTMLDivElement>(null);
+  /* 💡 【修正点①】警告の最大の原因だった targetRef と target 指定を完全に削除！
+     ページ全体のスクロール量（scrollY）を直接監視する、最も軽くて安全な方法に切り替えます。 */
+  const { scrollY } = useScroll();
 
-  // センサーを滑走路にくっつけて、スクロールの進み具合（0〜1）を測る！
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start start", "end start"], // スクロールの開始と終了のタイミングを指定
-  });
-
-  const zoomScale = useTransform(scrollYProgress, [0, 1], [1, 40]);
-  const zoomOpacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
-  const textY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  /* 💡 【修正点②】割合（0〜1）ではなく、実際のスクロールピクセル数（px）でマッピングします。
+     h-[300vh]（画面3枚分分スクロールできる長さ）に合わせて、直感的な数値に調整しています。 */
+  const zoomScale = useTransform(scrollY, [0, 1200], [1, 40]);
+  const zoomOpacity = useTransform(scrollY, [900, 1200], [1, 0]);
+  const textY = useTransform(scrollY, [0, 400], [0, -100]);
+  const textOpacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
-    <section ref={targetRef} className="h-[300vh] relative">
+    /* 💡 【修正点③】ref={targetRef} を削除してスッキリさせました */
+    <section className="h-[300vh] relative">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
         <motion.div
           style={{ y: textY, opacity: textOpacity }}

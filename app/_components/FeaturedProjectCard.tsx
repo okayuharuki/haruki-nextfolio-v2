@@ -30,16 +30,16 @@ export default function FeaturedProjectCard({ project, index }: FeaturedProjectC
         <p className="text-gray-400 text-lg mb-8 leading-relaxed">{project.description}</p>
 
         {/* data.ts で追加した「技術タグ」を並べる！ */}
-        <div className="flex gap-3 mb-10 flex-wrap">
+        <ul className="flex gap-3 mb-10 flex-wrap">
           {project.tags.map((tag) => (
-            <span
+            <li
               key={tag}
               className="bg-black border border-zinc-700 text-gray-300 px-4 py-2 rounded-full text-sm font-bold"
             >
               {tag}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* data.ts で追加した「色（accentColor）」を使ってボタンを光らせる！ */}
         <a
