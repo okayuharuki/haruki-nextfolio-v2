@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import Header from "@/app/_components/Header";
 import Footer from "@/app/_components/Footer";
 import ScrollToTop from "@/app/_components/ScrollToTop";
 import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +42,19 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}>
       <body className="min-h-full flex flex-col">
+        {GA_ID && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <Header />
         {children}
         <Footer />
