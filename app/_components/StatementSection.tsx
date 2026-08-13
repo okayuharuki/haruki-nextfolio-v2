@@ -23,7 +23,7 @@ const itemVariants: Variants = {
 export default function StatementSection() {
   return (
     <section className="bg-black text-white w-full">
-      <div className="min-h-screen flex items-center justify-center px-6 relative z-10">
+      <div className="min-h-dvh flex items-center justify-center px-6 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"

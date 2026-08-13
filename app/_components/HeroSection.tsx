@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     /* 💡 【修正点③】ref={targetRef} を削除してスッキリさせました */
     <section className="h-[300vh] relative">
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-dvh flex flex-col items-center justify-center overflow-hidden">
         <motion.div
           style={{ y: textY, opacity: textOpacity }}
           className="absolute top-1/4 text-center z-10 w-full px-4 pt-15"

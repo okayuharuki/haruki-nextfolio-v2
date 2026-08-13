@@ -26,7 +26,7 @@ export default function MobileDrawer({ isOpen, onClose, navItems }: MobileDrawer
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "-100%" }} // 消える時はまた上へ帰っていく！
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="fixed top-0 left-0 w-full h-screen z-40 bg-black/95 backdrop-blur-3xl flex flex-col items-center justify-center gap-12 md:hidden"
+          className="fixed top-0 left-0 w-full h-dvh z-40 bg-black/95 backdrop-blur-3xl flex flex-col items-center justify-center gap-12 md:hidden"
         >
           {navItems.map((item) => (
             <Link
