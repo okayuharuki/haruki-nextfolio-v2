@@ -7,6 +7,7 @@ export type Project = {
   title: string;
   description: string;
   icon: string;
+  image?: string; // 設定するとカード右側に絵文字の代わりに表示
   tags: string[];
   link: string;
   accentColor: string;
@@ -15,17 +16,6 @@ export type Project = {
 };
 
 export const PROJECTS_DATA: Project[] = [
-  {
-    title: "Football Connect",
-    description:
-      "サッカー / フットサル / ソサイチのチーム運営を1つにまとめるWebアプリです。出欠管理・選手名鑑・試合記録・個人タイトル集計に加え、選手をドラッグで配置しコマ送り再生できる作戦ボードを備えています。Next.js 16 + React 19 を Cloudflare Workers 上で動かし、Supabase の行レベルセキュリティでチーム単位のデータ分離を実装。Stripe によるチーム単位のサブスクリプション課金まで含めて実運用しています。開発にはAIコーディング（Claude Code）を全面的に活用し、実装だけでなくセキュリティレビューやリファクタリングにも用いています。",
-    icon: "⚽",
-    tags: ["Next.js", "TypeScript", "Cloudflare Workers", "Supabase", "Tailwind CSS"],
-    link: "https://football-connect.app/", // ※実際のアプリURLに書き換えてください
-    accentColor: "text-purple-400", // 鮮やかなパープルで本格SaaS感を演出
-    gradientFrom: "from-purple-500/20",
-    openInNewTab: true,
-  },
   {
     title: "今日のランチ決定くん",
     description:
@@ -37,15 +27,16 @@ export const PROJECTS_DATA: Project[] = [
     gradientFrom: "from-blue-500/20",
   },
   {
-    title: "Portfolio Site",
+    title: "Football Connect",
     description:
-      "Next.jsとTypeScriptで構築。最新のモダンWebデザインとFramer Motionによる直感的なUIに加え、Lighthouseでの全項目100点を達成。速度・SEO・アクセシビリティを極限まで最適化しました。",
-    icon: "🚀",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    link: "#",
-    accentColor: "text-orange-500", // オレンジ色の文字
-    gradientFrom: "from-orange-500/20", // オレンジ色の光
-    openInNewTab: false, // 今いるサイト自身なので別タブで開かない
+      "サッカー / フットサル / ソサイチのチーム運営をひとつにまとめるWebアプリ。出欠管理や選手名鑑に加え、選手をドラッグで配置してコマ送り再生できる作戦ボードが特徴です。Stripeでのサブスク課金まで含め、実際に運用中のSaaSとして稼働しています。開発にはAIコーディング（Claude Code）を全面的に活用し、実装だけでなくセキュリティレビューやリファクタリングにも用いています。",
+    icon: "⚽",
+    image: "/football-connect-logo.png",
+    tags: ["Next.js", "TypeScript", "Cloudflare Workers", "Supabase", "Tailwind CSS"],
+    link: "https://football-connect.app/", // ※実際のアプリURLに書き換えてください
+    accentColor: "text-purple-400", // 鮮やかなパープルで本格SaaS感を演出
+    gradientFrom: "from-purple-500/20",
+    openInNewTab: true,
   },
 ];
 

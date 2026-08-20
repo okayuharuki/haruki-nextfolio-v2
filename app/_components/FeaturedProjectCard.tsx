@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { Project } from "@/app/_lib/data";
 
 type FeaturedProjectCardProps = {
@@ -60,10 +61,21 @@ export default function FeaturedProjectCard({ project, index }: FeaturedProjectC
           className={`absolute inset-0 bg-linear-to-br ${project.gradientFrom} to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500`}
         />
 
-        {/* 巨大なアイコンが、ホバーで少しだけ前に迫ってくる！ */}
-        <span aria-hidden="true" className="text-8xl md:text-9xl relative z-10 group-hover:scale-110 transition-transform duration-500 cursor-pointer">
-          {project.icon}
-        </span>
+        {/* 画像があればロゴを、なければ絵文字アイコンを表示。ホバーで少しだけ前に迫ってくる！ */}
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={`${project.title} のロゴ`}
+            width={200}
+            height={200}
+            unoptimized // Next.jsの画像最適化がPNGの透過(tRNS)を落としてしまうため、原本のまま配信
+            className="w-24 h-24 md:w-40 md:h-40 object-contain relative z-10 group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : (
+          <span aria-hidden="true" className="text-8xl md:text-9xl relative z-10 group-hover:scale-110 transition-transform duration-500 cursor-pointer">
+            {project.icon}
+          </span>
+        )}
       </div>
     </motion.div>
   );
